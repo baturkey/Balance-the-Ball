@@ -1,4 +1,2 @@
-# Balance-the-Ball
+# Balance-the-Ball [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 An Android app to test dexterity
-
-License: [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
