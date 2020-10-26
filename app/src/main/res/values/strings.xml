@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Balance the Ball</string>
+    <string name="instructions">Tilt your device to hold the ball in the target for 3 seconds</string>
+    <string name="reset">Tap to reset</string>
+</resources>

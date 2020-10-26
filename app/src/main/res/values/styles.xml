@@ -1,0 +1,12 @@
+<resources>
+    <style name="GameTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:background">@android:color/holo_green_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style  name="infoTheme">
+        <item name="android:background">#333333</item>
+        <item name="android:textColor">#DDDDDD</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">10sp</item>
+    </style>
+</resources>
