@@ -1,6 +1,7 @@
 package com.jeffliu.balancetheball;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -23,20 +24,22 @@ public class GameView extends View
     {
         super(context, attrs);
 
+        Resources resources = getResources();
+
         mBallPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mBallPaint.setStyle(Paint.Style.FILL);
-        mBallPaint.setColor(getResources().getColor(R.color.white));
+        mBallPaint.setColor(resources.getColor(R.color.white));
 
         mTargetPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mTargetPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 
         mInPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mInPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-        mInPaint.setColor(getResources().getColor(R.color.yellow));
+        mInPaint.setColor(resources.getColor(R.color.yellow));
 
         mFinishedPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mFinishedPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-        mFinishedPaint.setColor(getResources().getColor(R.color.green));
+        mFinishedPaint.setColor(resources.getColor(R.color.green));
 
         mBundle = new Bundle();
     }
@@ -54,8 +57,8 @@ public class GameView extends View
         int h = resolveSizeAndState(MeasureSpec.getSize(w), heightMeasureSpec, 0);
         setMeasuredDimension(w, h);
 
-        mCenterX = getWidth() / 2f;
-        mCenterY = getHeight() / 2f;
+        mCenterX = w / 2f;
+        mCenterY = h / 2f;
     }
 
     @Override protected void onDraw(Canvas canvas)

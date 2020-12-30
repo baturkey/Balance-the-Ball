@@ -38,7 +38,7 @@ public class GameActivity extends Activity implements SensorEventListener
         setContentView(R.layout.activity_game);
         findViewById(R.id.game_layout).setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-        mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         assert mSensorManager != null;
         mGravitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
 
@@ -49,7 +49,7 @@ public class GameActivity extends Activity implements SensorEventListener
     @Override protected void onResume()
     {
         super.onResume();
-        mSensorManager.registerListener(this, mGravitySensor, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this, mGravitySensor, SensorManager.SENSOR_DELAY_GAME);
     }
 
     protected void onPause() {
@@ -68,8 +68,8 @@ public class GameActivity extends Activity implements SensorEventListener
         float centerY = gv.getHeight()/2f;
         float centerR = gv.getWidth()/8f;
 
-        mBall.vx -= event.values[0];
-        mBall.vy += event.values[1];
+        mBall.vx -= event.values[0] / 2;
+        mBall.vy += event.values[1] / 2;
         mBall.px += mBall.vx;
         mBall.py += mBall.vy;
 
